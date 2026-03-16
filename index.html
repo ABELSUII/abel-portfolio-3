@@ -4,124 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abel Thomas Jacob | Portfolio</title>
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --main-color: #00ffff;
-            --bg-color: #080808;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --text-color: #ffffff;
-        }
+</head>
+<body>
 
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-            font-family: 'Poppins', sans-serif; 
-            text-decoration: none; 
-            scroll-behavior: smooth; 
-        }
+    <div class="cursor-glow"></div>
+    <div id="loader"><div class="loader-content"><h1>ABEL</h1></div></div>
+    <div id="particles-js"></div>
 
-        body { 
-            background: var(--bg-color); 
-            color: var(--text-color); 
-            overflow-x: hidden; 
-        }
+    <header>
+        <a href="#" class="logo"><i class="fa-solid fa-brain"></i> Abel<span>.</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        /* --- BACKGROUND & LOADER --- */
-        #particles-js { 
-            position: fixed; 
-            inset: 0; 
-            z-index: -1; 
-        }
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Abel</span></h1>
+            <h3 class="typing-text">I'm a <span class="typed-element"></span></h3>
+            <p>AIML student at Sree Buddha College of Engineering. Driven by the <b>Kaizen</b> mindset—continuously evolving through code and design.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <img src="portfolio.jpg.jpg" alt="Abel Thomas Jacob">
+            </div>
+        </div>
+    </section>
 
-        .cursor-glow { 
-            position: fixed; 
-            width: 400px; 
-            height: 400px; 
-            background: radial-gradient(circle, rgba(0,255,255,0.08) 0%, transparent 70%); 
-            border-radius: 50%; 
-            pointer-events: none; 
-            transform: translate(-50%, -50%); 
-            z-index: 9999; 
-        }
+    <section class="skills" id="skills">
+        <h2 class="heading">Technical <span>Expertise</span></h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                <h3>HTML & CSS</h3>
+                <div class="skill-bar"><span style="--i:95%"></span></div>
+                <p>Building pixel-perfect, responsive layouts with modern CSS architectures.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                <h3>JavaScript</h3>
+                <div class="skill-bar"><span style="--i:75%"></span></div>
+                <p>Developing interactive functionality and seamless user logic.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                <h3>Web Designing</h3>
+                <div class="skill-bar"><span style="--i:88%"></span></div>
+                <p>Creating user-centric designs with a focus on UI/UX optimization.</p>
+            </div>
+        </div>
+    </section>
 
-        #loader { 
-            position: fixed; 
-            inset: 0; 
-            background: #000; 
-            z-index: 10000; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            transition: 0.6s ease; 
-        }
+    <section class="projects" id="projects">
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <div class="project-container">
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Personal Portfolio</h3>
+                <p>A high-performance site featuring glassmorphism and 3D hover effects.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>AI Lab Models</h3>
+                <p>Data analysis and predictive modeling using Python and AIML tools.</p>
+            </div>
+        </div>
+    </section>
 
-        .loader-content h1 { 
-            font-size: 3rem; 
-            color: var(--main-color); 
-            text-shadow: 0 0 20px var(--main-color); 
-            letter-spacing: 5px; 
-        }
+    <section class="hobbies" id="hobbies">
+        <h2 class="heading">My <span>Hobbies</span></h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card"><i class="fa-solid fa-gamepad"></i><h3>Gaming</h3></div>
+            <div class="hobby-card"><i class="fa-solid fa-futbol"></i><h3>Football</h3></div>
+            <div class="hobby-card"><i class="fa-solid fa-book-open"></i><h3>Reading</h3></div>
+            <div class="hobby-card"><i class="fa-solid fa-pen-nib"></i><h3>Web Designing</h3></div>
+        </div>
+    </section>
 
-        /* --- NAVIGATION --- */
-        header { 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
-            padding: 1.5rem 9%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            z-index: 100; 
-            background: rgba(0,0,0,0.7); 
-            backdrop-filter: blur(10px); 
-        }
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-box"><i class="fa-solid fa-envelope"></i> abel@email.com</div>
+                <div class="info-box"><i class="fa-solid fa-location-dot"></i> Kerala, India</div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Signal</button>
+            </form>
+        </div>
+    </section>
 
-        .logo { font-size: 2.2rem; color: #fff; font-weight: 700; }
-        .logo span, .logo i { color: var(--main-color); }
+    <footer>
+        <p>&copy; 2026 Abel Thomas Jacob | Built with Kaizen Focus</p>
+    </footer>
 
-        nav a { 
-            font-size: 1.1rem; 
-            color: #fff; 
-            margin-left: 2.5rem; 
-            transition: 0.3s; 
-            font-weight: 500;
-        }
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        new Typed(".typed-element", {
+            strings: ["AIML Student", "Web Designer", "Gamer", "Footballer", "Kaizen Enthusiast"],
+            typeSpeed: 60, backSpeed: 40, loop: true
+        });
 
-        nav a:hover { 
-            color: var(--main-color); 
-            text-shadow: 0 0 10px var(--main-color); 
-        }
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80 }, color: { value: "#00ffff" },
+                opacity: { value: 0.3 }, size: { value: 2.5 },
+                line_linked: { enable: true, color: "#00ffff", opacity: 0.1 },
+                move: { speed: 1.5 }
+            }
+        });
 
-        /* --- SECTIONS --- */
-        section { 
-            min-height: 100vh; 
-            padding: 10rem 9% 5rem; 
-        }
+        const sr = ScrollReveal({ distance: '60px', duration: 1500, delay: 200, reset: true });
+        sr.reveal('.home-content, .heading', { origin: 'top' });
+        sr.reveal('.home-img, .skill-card, .card, .hobby-card', { origin: 'bottom', interval: 150 });
 
-        .heading { 
-            text-align: center; 
-            font-size: 3.5rem; 
-            margin-bottom: 4rem; 
-        }
+        window.onload = () => {
+            const loader = document.getElementById("loader");
+            loader.style.opacity = "0";
+            setTimeout(() => { loader.style.display = "none"; }, 500);
+        };
 
-        .heading span { color: var(--main-color); }
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
 
-        /* --- HOME --- */
-        .home { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            gap: 2rem; 
-        }
-
-        .home-content h1 { font-size: 4.5rem; line-height: 1.2; }
-        .home-content span { color: var(--main-color); }
-
-        .typing-text { font-size: 2rem; margin: 1rem 0; font-weight: 600; }
-
-        .home-img .img-box {
+        window.addEventListener("scroll", () => {
+            document.querySelectorAll('.skill-bar span').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if(rect.top < window.innerHeight) el.style.width = el.style.getPropertyValue('--i');
+            });
+        });
+    </script>
+</body>
+</html>
