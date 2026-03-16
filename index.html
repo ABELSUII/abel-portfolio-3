@@ -45,7 +45,7 @@
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#contact" class="btn">Let's Talk</a>
+            <a href="#projects" class="btn">View My Work</a>
         </div>
         <div class="home-img">
             <div class="img-box">
@@ -72,30 +72,56 @@
         </div>
     </section>
 
+    <section class="projects" id="projects">
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <div class="project-container">
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio using HTML, CSS, and JS with 3D effects and smooth animations.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>AI Mini Project</h3>
+                    <p>Machine learning models built using Python and Scikit-learn to analyze data patterns.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3>Web UI Design</h3>
+                    <p>Modern glassmorphism and neomorphism design experiments for web interfaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="hobbies" id="hobbies">
         <h2 class="heading">My <span>Hobbies</span></h2>
         <div class="hobbies-grid">
             <div class="hobby-card">
                 <i class="fa-solid fa-gamepad"></i>
                 <h3>Gaming</h3>
-                <p>Competitive strategy and open-world RPGs.</p>
+                <p>Strategic gaming and competitive esports.</p>
             </div>
             <div class="hobby-card">
                 <i class="fa-solid fa-futbol"></i>
                 <h3>Football</h3>
-                <p>Passion for the game, both playing and watching.</p>
+                <p>Love playing on the field and following the leagues.</p>
             </div>
             <div class="hobby-card">
                 <i class="fa-solid fa-camera-retro"></i>
                 <h3>Photography</h3>
-                <p>Capturing moments and exploring visual aesthetics.</p>
+                <p>Capturing the aesthetics of nature and urban life.</p>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        
         <div class="contact-container">
             <div class="contact-info">
                 <div class="info-item">
@@ -130,45 +156,11 @@
     </footer>
 
     <script>
+        // TYPEWRITER
         new Typed(".typed-element", {
             strings: ["AIML Student", "Web Designer", "Gamer", "Footballer"],
             typeSpeed: 60, backSpeed: 40, loop: true
         });
 
-        const sr = ScrollReveal({ distance: '80px', duration: 2000, delay: 200, reset: true });
-        sr.reveal('.home-content, .heading', { origin: 'top' });
-        sr.reveal('.home-img, .skill, .hobby-card', { origin: 'bottom', interval: 200 });
-
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80 },
-                color: { value: "#00ffff" },
-                opacity: { value: 0.5 },
-                size: { value: 3 },
-                line_linked: { enable: true, color: "#00ffff", opacity: 0.1 },
-                move: { speed: 2 }
-            }
-        });
-
-        window.onload = () => {
-            setTimeout(() => {
-                document.getElementById("loader").style.opacity = "0";
-                setTimeout(() => { document.getElementById("loader").style.display = "none"; }, 500);
-            }, 1000);
-        };
-
-        const glow = document.querySelector(".cursor-glow");
-        document.addEventListener("mousemove", (e) => {
-            glow.style.left = `${e.clientX}px`;
-            glow.style.top = `${e.clientY}px`;
-        });
-
-        window.addEventListener("scroll", () => {
-            document.querySelectorAll('.progress span').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if(rect.top < window.innerHeight) el.style.width = el.style.getPropertyValue('--i');
-            });
-        });
-    </script>
-</body>
-</html>
+        // SCROLL REVEAL
+        const sr = ScrollReveal({ distance: '80px', duration: 2000, delay:
