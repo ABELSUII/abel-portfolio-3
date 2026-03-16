@@ -29,114 +29,128 @@
         <div class="home-content">
             <h1>Hi, I'm <span>Abel</span></h1>
             <h3 class="typing-text">I'm a <span class="typed-element"></span></h3>
-            <p>AIML student at Sree Buddha College of Engineering. Embracing <b>Kaizen</b>—growing through daily code and creative design.</p>
+            <p>AIML student at Sree Buddha College of Engineering. Living by <b>Kaizen</b>: The relentless pursuit of 1% better every day.</p>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#projects" class="btn">View Work</a>
+            <a href="#projects" class="btn">Explore Work</a>
         </div>
         <div class="home-img">
-            <div class="img-box">
-                <img src="portfolio.jpg.jpg" alt="Abel Thomas Jacob">
-            </div>
+            <div class="img-box"><img src="portfolio.jpg.jpg" alt="Abel Thomas Jacob"></div>
         </div>
     </section>
 
     <section class="skills" id="skills">
-        <h2 class="heading">Technical <span>Expertise</span></h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+        <h2 class="heading">Skill <span>Metrics</span></h2>
+        <div class="skills-container">
+            <div class="skill-graph">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                        <div id="number">95%</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs><linearGradient id="GradientColor"><stop offset="0%" stop-color="#00ffff" /><stop offset="100%" stop-color="#008080" /></linearGradient></defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" style="stroke-dashoffset: calc(440 - (440 * 95) / 100);" />
+                </svg>
                 <h3>HTML & CSS</h3>
-                <div class="skill-bar"><span style="--i:95%"></span></div>
-                <p>Building high-performance, pixel-perfect layouts.</p>
             </div>
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+
+            <div class="skill-graph">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                        <div id="number">75%</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" style="stroke-dashoffset: calc(440 - (440 * 75) / 100);" />
+                </svg>
                 <h3>JavaScript</h3>
-                <div class="skill-bar"><span style="--i:75%"></span></div>
-                <p>Creating dynamic interactivity and modern logic.</p>
             </div>
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-                <h3>Web Designing</h3>
-                <div class="skill-bar"><span style="--i:88%"></span></div>
-                <p>Aesthetic UI/UX design with a focus on evolution.</p>
+
+            <div class="skill-graph">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                        <div id="number">88%</div>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" style="stroke-dashoffset: calc(440 - (440 * 88) / 100);" />
+                </svg>
+                <h3>UI/UX Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Recent <span>Work</span></h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Kaizen Portfolio</h3>
+                <p>Advanced web architecture using CSS variables and dynamic JS libraries.</p>
+            </div>
+            <div class="project-card">
+                <i class="fa-solid fa-brain"></i>
+                <h3>AI Insights</h3>
+                <p>Data modeling and machine learning projects from Sree Buddha Labs.</p>
             </div>
         </div>
     </section>
 
     <section class="hobbies" id="hobbies">
-        <h2 class="heading">My <span>Hobbies</span></h2>
+        <h2 class="heading">My <span>Passions</span></h2>
         <div class="hobbies-grid">
-            <div class="hobby-card"><i class="fa-solid fa-gamepad"></i><h3>Gaming</h3></div>
-            <div class="hobby-card"><i class="fa-solid fa-futbol"></i><h3>Football</h3></div>
-            <div class="hobby-card"><i class="fa-solid fa-book-open"></i><h3>Reading</h3></div>
-            <div class="hobby-card"><i class="fa-solid fa-pen-nib"></i><h3>Web Designing</h3></div>
+            <div class="hobby-box"><i class="fa-solid fa-gamepad"></i><p>Gaming</p></div>
+            <div class="hobby-box"><i class="fa-solid fa-futbol"></i><p>Football</p></div>
+            <div class="hobby-box"><i class="fa-solid fa-book"></i><p>Reading</p></div>
+            <div class="hobby-box"><i class="fa-solid fa-pen-nib"></i><p>Design</p></div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <h2 class="heading">Send <span>Signal</span></h2>
         <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" placeholder="Name" required>
             <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Signal</button>
+            <button type="submit" class="btn">Transmit</button>
         </form>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Abel Thomas Jacob | Built with Kaizen Focus</p>
-    </footer>
+    <footer><p>&copy; 2026 Abel Thomas Jacob | Continuous Improvement</p></footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
     <script>
-        // Typing
         new Typed(".typed-element", {
             strings: ["AIML Student", "Web Designer", "Gamer", "Footballer", "Kaizen Enthusiast"],
             typeSpeed: 60, backSpeed: 40, loop: true
         });
 
-        // Particles
         particlesJS("particles-js", {
             particles: {
                 number: { value: 60 }, color: { value: "#00ffff" },
                 opacity: { value: 0.2 }, size: { value: 2 },
                 line_linked: { enable: true, color: "#00ffff", opacity: 0.1 },
-                move: { speed: 1 }
+                move: { speed: 1.2 }
             }
         });
 
-        // Bulletproof Loader Fix
-        function hideLoader() {
+        window.addEventListener('load', () => {
             const loader = document.getElementById("loader");
-            if(loader) {
-                loader.style.opacity = "0";
-                setTimeout(() => { loader.style.display = "none"; }, 500);
-            }
-        }
-        window.addEventListener('load', hideLoader);
-        setTimeout(hideLoader, 2000); // Forced show after 2s
+            loader.style.opacity = "0";
+            setTimeout(() => { loader.style.display = "none"; }, 500);
+        });
 
-        // Cursor Glow
         const glow = document.querySelector(".cursor-glow");
         document.addEventListener("mousemove", (e) => {
             glow.style.left = e.clientX + "px";
             glow.style.top = e.clientY + "px";
         });
-
-        // Skill Reveal
-        window.addEventListener("scroll", () => {
-            document.querySelectorAll('.skill-bar span').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if(rect.top < window.innerHeight) el.style.width = el.style.getPropertyValue('--i');
-            });
-        });
     </script>
 </body>
+</html>
 </html>
