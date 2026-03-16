@@ -25,14 +25,12 @@
     <div id="particles-js"></div>
 
     <header>
-        <a href="#" class="logo">
-            <i class="fa-solid fa-brain"></i> Abel<span>.</span>
-        </a>
+        <a href="#" class="logo"><i class="fa-solid fa-brain"></i> Abel<span>.</span></a>
         <nav>
             <a href="#home">Home</a>
             <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
             <a href="#projects">Projects</a>
+            <a href="#hobbies">Hobbies</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -41,13 +39,13 @@
         <div class="home-content">
             <h1>Hi, I'm <span>Abel</span></h1>
             <h3 class="typing-text">I'm a <span class="typed-element"></span></h3>
-            <p>AIML student passionate about AI, Web Development and building creative projects.</p>
+            <p>AIML student at Sree Buddha College of Engineering. I specialize in building intelligent systems and sleek user interfaces.</p>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#projects" class="btn">View My Work</a>
+            <a href="#contact" class="btn">Let's Talk</a>
         </div>
         <div class="home-img">
             <div class="img-box">
@@ -57,106 +55,118 @@
     </section>
 
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+        <h2 class="heading">Technical <span>Skills</span></h2>
         <div class="skills-container">
             <div class="skill">
-                <div class="skill-info"><span>HTML</span><span>90%</span></div>
-                <div class="progress"><span style="--i:90%"></span></div>
+                <div class="skill-info"><span>Python & AI</span><span>75%</span></div>
+                <div class="progress"><span style="--i:75%"></span></div>
             </div>
             <div class="skill">
-                <div class="skill-info"><span>CSS</span><span>80%</span></div>
-                <div class="progress"><span style="--i:80%"></span></div>
+                <div class="skill-info"><span>Web Development</span><span>85%</span></div>
+                <div class="progress"><span style="--i:85%"></span></div>
             </div>
             <div class="skill">
-                <div class="skill-info"><span>JavaScript</span><span>65%</span></div>
-                <div class="progress"><span style="--i:65%"></span></div>
-            </div>
-            <div class="skill">
-                <div class="skill-info"><span>Python</span><span>70%</span></div>
+                <div class="skill-info"><span>UI/UX Design</span><span>70%</span></div>
                 <div class="progress"><span style="--i:70%"></span></div>
             </div>
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h2 class="heading">Featured <span>Projects</span></h2>
-        <div class="project-container">
-            <div class="card">
-                <div class="card-content">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Portfolio Website</h3>
-                    <p>Responsive portfolio using HTML, CSS, and JS with 3D effects.</p>
-                </div>
+    <section class="hobbies" id="hobbies">
+        <h2 class="heading">My <span>Hobbies</span></h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3>Gaming</h3>
+                <p>Competitive strategy and open-world RPGs.</p>
             </div>
-            <div class="card">
-                <div class="card-content">
-                    <i class="fa-solid fa-microchip"></i>
-                    <h3>AI Mini Project</h3>
-                    <p>Machine learning models built using Python and Scikit-learn.</p>
-                </div>
+            <div class="hobby-card">
+                <i class="fa-solid fa-futbol"></i>
+                <h3>Football</h3>
+                <p>Passion for the game, both playing and watching.</p>
             </div>
-            <div class="card">
-                <div class="card-content">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h3>Web Design</h3>
-                    <p>Modern glassmorphism UI design practice.</p>
-                </div>
+            <div class="hobby-card">
+                <i class="fa-solid fa-camera-retro"></i>
+                <h3>Photography</h3>
+                <p>Capturing moments and exploring visual aesthetics.</p>
             </div>
         </div>
     </section>
 
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>abel@email.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Kerala, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="#" class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <textarea name="message" cols="30" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Abel Thomas Jacob | All Rights Reserved.</p>
+    </footer>
+
     <script>
-        // TYPEWRITER
         new Typed(".typed-element", {
             strings: ["AIML Student", "Web Designer", "Gamer", "Footballer"],
-            typeSpeed: 60,
-            backSpeed: 40,
-            loop: true
+            typeSpeed: 60, backSpeed: 40, loop: true
         });
 
-        // SCROLL REVEAL
-        const sr = ScrollReveal({
-            distance: '80px', duration: 2000, delay: 200, reset: true
-        });
+        const sr = ScrollReveal({ distance: '80px', duration: 2000, delay: 200, reset: true });
         sr.reveal('.home-content, .heading', { origin: 'top' });
-        sr.reveal('.home-img, .skill, .card', { origin: 'bottom', interval: 200 });
+        sr.reveal('.home-img, .skill, .hobby-card', { origin: 'bottom', interval: 200 });
 
-        // PARTICLES
         particlesJS("particles-js", {
             particles: {
-                number: { value: 100 },
+                number: { value: 80 },
                 color: { value: "#00ffff" },
-                shape: { type: "circle" },
                 opacity: { value: 0.5 },
                 size: { value: 3 },
-                line_linked: { enable: true, color: "#00ffff", opacity: 0.2 },
+                line_linked: { enable: true, color: "#00ffff", opacity: 0.1 },
                 move: { speed: 2 }
             }
         });
 
-        // LOADER
         window.onload = () => {
             setTimeout(() => {
-                const loader = document.getElementById("loader");
-                loader.style.opacity = "0";
-                setTimeout(() => { loader.style.display = "none"; }, 500);
+                document.getElementById("loader").style.opacity = "0";
+                setTimeout(() => { document.getElementById("loader").style.display = "none"; }, 500);
             }, 1000);
         };
 
-        // CURSOR GLOW
         const glow = document.querySelector(".cursor-glow");
         document.addEventListener("mousemove", (e) => {
             glow.style.left = `${e.clientX}px`;
             glow.style.top = `${e.clientY}px`;
         });
 
-        // SKILL ANIMATION TRIGGER
         window.addEventListener("scroll", () => {
             document.querySelectorAll('.progress span').forEach(el => {
                 const rect = el.getBoundingClientRect();
-                if(rect.top < window.innerHeight) {
-                    el.style.width = el.style.getPropertyValue('--i');
-                }
+                if(rect.top < window.innerHeight) el.style.width = el.style.getPropertyValue('--i');
             });
         });
     </script>
