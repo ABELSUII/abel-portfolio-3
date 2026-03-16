@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel Thomas Jacob | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="glow-text">ABEL</h1>
+            <div class="load-bar"></div>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <header>
+        <a href="#" class="logo">Abel<span>.</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Abel</span></h1>
+            <h3 class="typing-text">I'm a <span class="typed-element"></span></h3>
+            <p>AIML student passionate about AI, Web Development and building creative projects.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <img src="portfolio.jpg" alt="Profile">
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-info"><span>HTML</span><span>90%</span></div>
+                <div class="progress"><span style="--i:90%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="skill-info"><span>CSS</span><span>80%</span></div>
+                <div class="progress"><span style="--i:80%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="skill-info"><span>JavaScript</span><span>65%</span></div>
+                <div class="progress"><span style="--i:65%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="skill-info"><span>Python</span><span>70%</span></div>
+                <div class="progress"><span style="--i:70%"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <div class="project-container">
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio using HTML, CSS, and JS with 3D effects.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>AI Mini Project</h3>
+                    <p>Machine learning models built using Python and Scikit-learn.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3>Web Design</h3>
+                    <p>Modern glassmorphism UI design practice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // TYPEWRITER
+        new Typed(".typed-element", {
+            strings: ["AIML Student", "Web Designer", "Gamer", "Footballer"],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+
+        // SCROLL REVEAL
+        const sr = ScrollReveal({
+            distance: '80px',
+            duration: 2000,
+            delay: 200,
+            reset: true
+        });
+        sr.reveal('.home-content, .heading', { origin: 'top' });
+        sr.reveal('.home-img, .skill, .card', { origin: 'bottom', interval: 200 });
+
+        // PARTICLES
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                color: { value: "#00ffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                line_linked: { enable: true, color: "#00ffff", opacity: 0.2 },
+                move: { speed: 2 }
+            }
+        });
+
+        // LOADER
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById("loader").style.opacity = "0";
+                setTimeout(() => { document.getElementById("loader").style.display = "none"; }, 500);
+            }, 1500);
+        };
+
+        // CURSOR GLOW
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.left = `${e.clientX}px`;
+            glow.style.top = `${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>
