@@ -3,154 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abel Thomas Jacob | Portfolio</title>
+    <title>Abel Thomas Jacob | Engineering Portfolio</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="cursor-glow"></div>
-    <div id="loader"><div class="loader-content"><h1>ABEL</h1></div></div>
     <div id="particles-js"></div>
+    <div class="cursor-glow"></div>
+    
+    <div id="loader">
+        <div class="loader-content">
+            <h1 data-text="ABEL">ABEL</h1>
+        </div>
+    </div>
+
+    <div id="progress">
+        <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>
+    </div>
 
     <header>
-        <a href="#" class="logo"><i class="fa-solid fa-brain"></i> Abel<span>.</span></a>
-        <nav>
+        <a href="#" class="logo">ATJ<span>_</span></a>
+        <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#hobbies">Hobbies</a>
+            <a href="#skills">Metrics</a>
+            <a href="#projects">Work</a>
+            <a href="#hobbies">Passions</a>
             <a href="#contact">Contact</a>
         </nav>
+        <a href="#" class="btn-resume">CV <i class="fa-solid fa-file-pdf"></i></a>
     </header>
 
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, I'm <span>Abel</span></h1>
-            <h3 class="typing-text">I'm a <span class="typed-element"></span></h3>
-            <p>AIML student at Sree Buddha College of Engineering. Living by <b>Kaizen</b>: The relentless pursuit of 1% better every day.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <span class="badge">AIML Engineering Scholar</span>
+            <h1>Abel Thomas <span>Jacob</span></h1>
+            <h3>Developing <span class="typed-element"></span></h3>
+            <p>Based at <strong>Sree Buddha College</strong>. Driven by <b>Kaizen</b>, I engineer intelligent systems with a focus on seamless user interaction and continuous data evolution.</p>
+            
+            <div class="social-wrapper">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#projects" class="btn">Explore Work</a>
+            
+            <div class="cta-group">
+                <a href="#projects" class="btn-main">View Projects</a>
+                <a href="#contact" class="btn-outline">Hire Me</a>
+            </div>
         </div>
-        <div class="home-img">
-            <div class="img-box"><img src="portfolio.jpg.jpg" alt="Abel Thomas Jacob"></div>
+
+        <div class="home-visual">
+            <div class="image-stack">
+                <img src="portfolio.jpg.jpg" alt="Abel Thomas Jacob" class="main-img">
+                <div class="img-accent"></div>
+            </div>
         </div>
     </section>
 
     <section class="skills" id="skills">
-        <h2 class="heading">Skill <span>Metrics</span></h2>
-        <div class="skills-container">
-            <div class="skill-graph">
-                <div class="outer-circle">
-                    <div class="inner-circle">
-                        <div id="number">95%</div>
-                    </div>
+        <div class="section-title">
+            <span class="subtitle">Competencies</span>
+            <h2>Technical <span>Gauges</span></h2>
+        </div>
+
+        <div class="skills-wrapper">
+            <div class="metric-card">
+                <div class="circle-box">
+                    <svg><circle cx="70" cy="70" r="70"></circle><circle cx="70" cy="70" r="70" style="--percent: 95"></circle></svg>
+                    <div class="number">95<span>%</span></div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs><linearGradient id="GradientColor"><stop offset="0%" stop-color="#00ffff" /><stop offset="100%" stop-color="#008080" /></linearGradient></defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" style="stroke-dashoffset: calc(440 - (440 * 95) / 100);" />
-                </svg>
                 <h3>HTML & CSS</h3>
+                <p>Architecture & Motion</p>
             </div>
 
-            <div class="skill-graph">
-                <div class="outer-circle">
-                    <div class="inner-circle">
-                        <div id="number">75%</div>
-                    </div>
+            <div class="metric-card">
+                <div class="circle-box">
+                    <svg><circle cx="70" cy="70" r="70"></circle><circle cx="70" cy="70" r="70" style="--percent: 75"></circle></svg>
+                    <div class="number">75<span>%</span></div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" style="stroke-dashoffset: calc(440 - (440 * 75) / 100);" />
-                </svg>
                 <h3>JavaScript</h3>
+                <p>Logic & Interactivity</p>
             </div>
 
-            <div class="skill-graph">
-                <div class="outer-circle">
-                    <div class="inner-circle">
-                        <div id="number">88%</div>
-                    </div>
+            <div class="metric-card">
+                <div class="circle-box">
+                    <svg><circle cx="70" cy="70" r="70"></circle><circle cx="70" cy="70" r="70" style="--percent: 88"></circle></svg>
+                    <div class="number">88<span>%</span></div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" style="stroke-dashoffset: calc(440 - (440 * 88) / 100);" />
-                </svg>
-                <h3>UI/UX Design</h3>
+                <h3>AIML Logic</h3>
+                <p>Models & Prediction</p>
             </div>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <h2 class="heading">Recent <span>Work</span></h2>
+        <div class="section-title">
+            <h2>Featured <span>Innovations</span></h2>
+        </div>
         <div class="project-grid">
-            <div class="project-card">
+            <div class="pro-card">
                 <i class="fa-solid fa-code"></i>
-                <h3>Kaizen Portfolio</h3>
-                <p>Advanced web architecture using CSS variables and dynamic JS libraries.</p>
+                <h4>Kaizen Framework</h4>
+                <p>A modular UI system designed for high-performance portfolio deployments.</p>
             </div>
-            <div class="project-card">
-                <i class="fa-solid fa-brain"></i>
-                <h3>AI Insights</h3>
-                <p>Data modeling and machine learning projects from Sree Buddha Labs.</p>
+            <div class="pro-card">
+                <i class="fa-solid fa-microchip"></i>
+                <h4>AI Diagnostic Tool</h4>
+                <p>Research project utilizing neural networks for predictive analytics.</p>
             </div>
         </div>
     </section>
 
     <section class="hobbies" id="hobbies">
-        <h2 class="heading">My <span>Passions</span></h2>
+        <div class="section-title"><h2>Beyond <span>The Code</span></h2></div>
         <div class="hobbies-grid">
-            <div class="hobby-box"><i class="fa-solid fa-gamepad"></i><p>Gaming</p></div>
-            <div class="hobby-box"><i class="fa-solid fa-futbol"></i><p>Football</p></div>
-            <div class="hobby-box"><i class="fa-solid fa-book"></i><p>Reading</p></div>
-            <div class="hobby-box"><i class="fa-solid fa-pen-nib"></i><p>Design</p></div>
+            <div class="hobby-card"><i class="fa-solid fa-gamepad"></i><p>Gaming</p></div>
+            <div class="hobby-card"><i class="fa-solid fa-futbol"></i><p>Football</p></div>
+            <div class="hobby-card"><i class="fa-solid fa-book"></i><p>Reading</p></div>
+            <div class="hobby-card"><i class="fa-solid fa-pen-nib"></i><p>Web Design</p></div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Send <span>Signal</span></h2>
+        <div class="section-title"><h2>Get In <span>Touch</span></h2></div>
         <form class="contact-form">
-            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Full Name" required>
             <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Transmit</button>
+            <button type="submit" class="btn-main">Transmit Signal</button>
         </form>
     </section>
 
-    <footer><p>&copy; 2026 Abel Thomas Jacob | Continuous Improvement</p></footer>
+    <footer>
+        <p>&copy; 2026 Abel Thomas Jacob | Engineered with Kaizen.</p>
+    </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
     <script>
+        // Typing
         new Typed(".typed-element", {
-            strings: ["AIML Student", "Web Designer", "Gamer", "Footballer", "Kaizen Enthusiast"],
-            typeSpeed: 60, backSpeed: 40, loop: true
+            strings: ["Neural Networks.", "Modern Web Systems.", "Predictive Models.", "User Experiences."],
+            typeSpeed: 50, backSpeed: 30, loop: true
         });
 
+        // Particles
         particlesJS("particles-js", {
             particles: {
-                number: { value: 60 }, color: { value: "#00ffff" },
+                number: { value: 50 }, color: { value: "#00ffff" },
                 opacity: { value: 0.2 }, size: { value: 2 },
-                line_linked: { enable: true, color: "#00ffff", opacity: 0.1 },
-                move: { speed: 1.2 }
+                line_linked: { enable: true, color: "#00ffff", opacity: 0.1 }
             }
         });
 
-        window.addEventListener('load', () => {
+        // Scroll Progress & Scroll Top
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round((pos * 100) / calcHeight);
+
+            if (pos > 100) { scrollProgress.style.display = "grid"; } 
+            else { scrollProgress.style.display = "none"; }
+
+            scrollProgress.addEventListener("click", () => { document.documentElement.scrollTop = 0; });
+            scrollProgress.style.background = `conic-gradient(var(--accent) ${scrollValue}%, var(--border) ${scrollValue}%)`;
+        };
+
+        window.onscroll = calcScrollValue;
+        window.onload = () => {
+            calcScrollValue();
             const loader = document.getElementById("loader");
             loader.style.opacity = "0";
             setTimeout(() => { loader.style.display = "none"; }, 500);
-        });
+        };
 
-        const glow = document.querySelector(".cursor-glow");
-        document.addEventListener("mousemove", (e) => {
-            glow.style.left = e.clientX + "px";
-            glow.style.top = e.clientY + "px";
-        });
+        // Scroll Reveal
+        const sr = ScrollReveal({ origin: 'bottom', distance: '40px', duration: 1000, delay: 200 });
+        sr.reveal('.home-content, .section-title, .metric-card, .pro-card, .hobby-card');
     </script>
 </body>
-</html>
 </html>
