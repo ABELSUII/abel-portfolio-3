@@ -6,58 +6,68 @@
     --text-dim: #888;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; text-decoration: none; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; text-decoration: none; scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); overflow-x: hidden; }
 
 #particles-js { position: fixed; inset: 0; z-index: -1; }
 
-/* Loader & Overlay */
-#loader, #success-overlay { position: fixed; inset: 0; background: #000; z-index: 99999; display: flex; justify-content: center; align-items: center; transition: 0.5s; }
-#success-overlay { background: rgba(5, 5, 7, 0.95); display: none; backdrop-filter: blur(10px); }
-.success-card { text-align: center; border: 1px solid var(--border); padding: 3rem; border-radius: 15px; }
+/* Loader */
+#loader { position: fixed; inset: 0; background: #000; z-index: 99999; display: flex; justify-content: center; align-items: center; }
+.loader-content h1 { font-family: 'Space Grotesk'; color: var(--accent); letter-spacing: 5px; }
 
-/* Rocket Scroll */
-#progress { position: fixed; bottom: 30px; right: 30px; height: 60px; width: 60px; display: none; place-items: center; border-radius: 50%; z-index: 1000; cursor: pointer; padding: 4px; }
-#progress-value { display: grid; place-items: center; height: 100%; width: 100%; background: var(--bg); border-radius: 50%; color: var(--accent); }
+/* Rocket Button */
+#progress { position: fixed; bottom: 20px; right: 20px; height: 50px; width: 50px; display: none; place-items: center; border-radius: 50%; z-index: 1000; cursor: pointer; }
+#progress-value { height: calc(100% - 8px); width: calc(100% - 8px); background: var(--bg); border-radius: 50%; display: grid; place-items: center; color: var(--accent); }
 #progress-value i { transform: rotate(-45deg); }
 
 /* Header */
 header { position: fixed; width: 100%; padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(5, 5, 7, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-.logo { font-size: 1.8rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk'; }
+.logo { font-size: 1.5rem; font-weight: 700; color: #fff; font-family: 'Space Grotesk'; }
 .logo span { color: var(--accent); }
 .navbar a { color: var(--text-dim); margin-left: 2rem; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
 .navbar a:hover { color: var(--accent); }
 
-/* Layout */
-section { padding: 10rem 10% 5rem; max-width: 1400px; margin: 0 auto; }
-.home { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.home-content h1 { font-size: 4rem; font-family: 'Space Grotesk'; margin-bottom: 1rem; }
+/* Sections */
+section { padding: 8rem 10% 4rem; max-width: 1200px; margin: 0 auto; }
+.home { display: flex; align-items: center; justify-content: space-between; gap: 3rem; }
+.home-content h1 { font-size: 3.5rem; font-family: 'Space Grotesk'; margin-bottom: 1rem; }
 .home-content span { color: var(--accent); }
 
-/* MOBILE BUTTON FIX */
+/* BUTTON LOGIC - FIXED FOR MOBILE */
 .cta-group { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-.btn-main, .btn-outline { padding: 1rem 2rem; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; cursor: pointer; text-align: center; }
+.btn-main, .btn-outline { padding: 1rem 2rem; border-radius: 4px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; text-align: center; cursor: pointer; display: inline-block; }
 .btn-main { background: var(--accent); color: #000; border: 1px solid var(--accent); }
 .btn-outline { border: 1px solid var(--accent); color: var(--accent); }
+.btn-main:hover { background: #fff; box-shadow: 0 0 15px var(--accent); }
 
 /* Visuals */
-.main-img { width: 300px; border-radius: 10px; border: 1px solid var(--border); }
+.main-img { width: 300px; border-radius: 10px; border: 1px solid var(--border); position: relative; }
 .scan-line { position: absolute; width: 100%; height: 2px; background: var(--accent); top: 0; animation: scan 3s linear infinite; box-shadow: 0 0 10px var(--accent); }
 @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
 
-/* Gauges */
+/* Skills */
 .skills-wrapper { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.metric-card { border: 1px solid var(--border); padding: 2rem; border-radius: 10px; text-align: center; width: 250px; }
+.metric-card { border: 1px solid var(--border); padding: 2rem; border-radius: 10px; text-align: center; width: 240px; }
 .circle-box svg { width: 150px; height: 150px; transform: rotate(-90deg); }
 .circle-box circle { fill: transparent; stroke: #151518; stroke-width: 8; cx: 75; cy: 75; r: 70; }
-.circle-box circle:nth-child(2) { stroke: var(--accent); stroke-dasharray: 440; stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100); transition: 1s; }
+.circle-box circle:nth-child(2) { stroke: var(--accent); stroke-dasharray: 440; stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100); }
 
-/* Responsive */
-@media (max-width: 991px) {
+/* Contact */
+.contact-form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.contact-form input, .contact-form textarea { padding: 1rem; background: #0a0a0c; border: 1px solid #222; color: #fff; outline: none; }
+.contact-form input:focus { border-color: var(--accent); }
+
+footer { text-align: center; padding: 3rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--text-dim); }
+
+/* MOBILE RESPONSIVENESS - THE CRITICAL FIX */
+@media (max-width: 768px) {
     header { padding: 1rem 5%; }
-    .navbar { display: none; }
+    .navbar { display: none; } /* Hide nav on mobile for clean look */
     .home { flex-direction: column-reverse; text-align: center; }
     .home-content h1 { font-size: 2.5rem; }
-    .cta-group { justify-content: center; }
-    .btn-main, .btn-outline { width: 100%; max-width: 300px; }
+    
+    .cta-group { justify-content: center; width: 100%; }
+    .btn-main, .btn-outline { width: 100%; max-width: 320px; } /* Stacks buttons neatly */
+    
+    .main-img { width: 250px; }
 }
